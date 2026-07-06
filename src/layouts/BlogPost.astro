@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Arash Derakhshan",
+  description = "Essays and notes by Arash Derakhshan.",
+  lang = "en",
+  dir = "ltr",
+} = Astro.props;
+---
+
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body>
+    <main class={dir === "rtl" ? "container rtl" : "container"}>
+      <slot />
+    </main>
+  </body>
+</html>

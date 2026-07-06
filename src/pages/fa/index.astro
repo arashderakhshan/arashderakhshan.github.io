@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = await getCollection("essays", ({ id, data }) => {
+  return id.startsWith("fa/") && data.lang === "fa";
+});
+
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="مقاله‌های فارسی | آرش درخشان"
+  description="مقاله‌ها و یادداشت‌های فارسی آرش درخشان."
+  lang="fa"
+  dir="rtl"
+>
+  <p><a href="/">خانه ←</a></p>
+
+  <h1>مقاله‌های فارسی</h1>
+
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={`/fa/essays/${post.id.replace("fa/", "")}/`}>
+          {post.data.title}
+        </a>
+        {" "}
+        <small>{post.data.pubDate.toLocaleDateString("fa-IR")}</small>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>

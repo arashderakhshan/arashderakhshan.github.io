@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("essays", ({ id, data }) => {
+    return id.startsWith("en/") && data.lang === "en";
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.id.replace("en/", "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | Arash Derakhshan`}
+  description={post.data.description}
+  lang="en"
+  dir="ltr"
+>
+  <p><a href="/en/">← English Essays</a></p>
+
+  <h1>{post.data.title}</h1>
+
+  <p class="date">
+    <em>{post.data.pubDate.toLocaleDateString("en-US")}</em>
+  </p>
+
+  <Content />
+</BaseLayout>

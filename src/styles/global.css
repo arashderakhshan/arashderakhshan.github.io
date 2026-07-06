@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 0 20px;
+  font-family: Georgia, serif;
+  line-height: 1.75;
+}
+
+.rtl {
+  direction: rtl;
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.9;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+h2 {
+  margin-top: 36px;
+}
+
+a {
+  color: #111111;
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dddddd;
+  margin: 32px 0;
+}
+
+small,
+.date {
+  color: #666666;
+}
+
+ul {
+  padding-left: 24px;
+}
+
+.rtl ul {
+  padding-left: 0;
+  padding-right: 24px;
+}

@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("essays", ({ id, data }) => {
+    return id.startsWith("fa/") && data.lang === "fa";
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.id.replace("fa/", "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | آرش درخشان`}
+  description={post.data.description}
+  lang="fa"
+  dir="rtl"
+>
+  <p><a href="/fa/">بازگشت به مقاله‌های فارسی ←</a></p>
+
+  <h1>{post.data.title}</h1>
+
+  <p class="date">
+    <em>{post.data.pubDate.toLocaleDateString("fa-IR")}</em>
+  </p>
+
+  <Content />
+</BaseLayout>

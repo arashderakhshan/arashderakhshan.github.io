@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
 :root {
   --dark: #1F1F1F;
   --gold: #DCC9A3;
@@ -115,7 +116,7 @@ a:hover {
 
 .rtl {
   direction: rtl;
-  font-family: Tahoma, Arial, sans-serif;
+  font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
   line-height: 1.95;
 }
 

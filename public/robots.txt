@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arashderakhshan.github.io/sitemap.xml

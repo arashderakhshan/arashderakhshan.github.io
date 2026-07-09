@@ -4,21 +4,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Arash Derakhshan"
-  description="Essays and notes by Arash Derakhshan."
+  description="Essays, notes, and ideas by Arash Derakhshan."
 >
-  <h1>Arash Derakhshan</h1>
+  <header class="site-header">
+    <h1 class="brand">Arash Derakhshan</h1>
+    <p class="tagline">Driven by clarity, fueled by execution.</p>
 
-  <p>
-    Essays, notes, and ideas on business, growth, discipline, analytics,
-    and personal operating systems.
-  </p>
+    <p class="lead">
+      Essays, notes, and ideas on business, growth, discipline, analytics,
+      leadership, and personal operating systems.
+    </p>
+  </header>
 
-  <hr />
+  <section>
+    <h2>Choose language</h2>
 
-  <h2>Languages</h2>
+    <div class="language-grid">
+      <a class="language-card" href="/en/">
+        <h2>English</h2>
+        <p>Essays and notes in English</p>
+      </a>
 
-  <ul>
-    <li><a href="/en/">English Essays</a></li>
-    <li><a href="/fa/">مقاله‌های فارسی</a></li>
-  </ul>
+      <a class="language-card rtl" href="/fa/">
+        <h2>فارسی</h2>
+        <p>مقاله‌ها و یادداشت‌های فارسی</p>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Personal archive. No comments, no noise, just writing.</p>
+  </footer>
 </BaseLayout>

@@ -12,14 +12,13 @@ const {
 <html lang={lang} dir={dir}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
   </head>
 
   <body>
-    <main class={dir === "rtl" ? "container rtl" : "container"}>
+    <main class={dir === "rtl" ? "rtl" : ""}>
       <slot />
     </main>
   </body>

@@ -23,13 +23,27 @@ const { Content } = await render(post);
   lang="en"
   dir="ltr"
 >
-  <p><a href="/en/">← English Essays</a></p>
+  <p class="nav"><a href="/en/">← English Essays</a></p>
 
-  <h1>{post.data.title}</h1>
+  <article>
+    <header class="article-header">
+      <h1 class="article-title">{post.data.title}</h1>
 
-  <p class="date">
-    <em>{post.data.pubDate.toLocaleDateString("en-US")}</em>
-  </p>
+      <p class="article-description">
+        {post.data.description}
+      </p>
 
-  <Content />
+      <p class="date">
+        <em>{post.data.pubDate.toLocaleDateString("en-US")}</em>
+      </p>
+    </header>
+
+    <section class="article-body">
+      <Content />
+    </section>
+
+    <footer class="article-footer">
+      <p><a href="/en/">← Back to English archive</a></p>
+    </footer>
+  </article>
 </BaseLayout>

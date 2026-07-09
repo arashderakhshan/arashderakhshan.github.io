@@ -162,3 +162,75 @@ a:hover {
     padding: 40px 20px;
   }
 }
+.article-header {
+  margin-bottom: 40px;
+}
+
+.article-title {
+  font-size: 44px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.article-description {
+  font-size: 21px;
+  color: var(--olive);
+  max-width: 720px;
+  margin-bottom: 12px;
+}
+
+.article-body {
+  max-width: 720px;
+}
+
+.article-body p {
+  margin: 0 0 24px;
+}
+
+.article-body h2 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.article-body h3 {
+  margin-top: 36px;
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.article-body blockquote {
+  margin: 32px 0;
+  padding-left: 24px;
+  border-left: 4px solid var(--gold);
+  color: var(--olive);
+}
+
+.rtl .article-body blockquote {
+  padding-left: 0;
+  padding-right: 24px;
+  border-left: none;
+  border-right: 4px solid var(--gold);
+}
+
+.article-body code {
+  background: rgba(31, 31, 31, 0.08);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 24px;
+}
+
+.article-body li {
+  margin-bottom: 8px;
+}
+
+.article-footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(31, 31, 31, 0.12);
+}

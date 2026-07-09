@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap');
 :root {
   --dark: #1F1F1F;
   --gold: #DCC9A3;
@@ -14,7 +14,7 @@ body {
   margin: 0;
   background: var(--cream);
   color: var(--dark);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Archivo", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.75;
 }
@@ -118,6 +118,10 @@ a:hover {
   direction: rtl;
   font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
   line-height: 1.95;
+}
+
+.rtl * {
+  font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
 }
 
 .rtl .article-list {

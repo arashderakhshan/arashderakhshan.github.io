@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://arashderakhshan.github.io',
+  site: 'https://arashd.ir',
   output: 'static',
   outDir: './docs',
 });

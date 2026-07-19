@@ -4,35 +4,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Arash Derakhshan"
-  description="Essays, notes, and ideas by Arash Derakhshan."
+  description="Essays on business, execution, leadership, growth, and personal systems by Arash Derakhshan."
 >
-  <header class="site-header">
+  <header class="site-header home-hero">
+    <p class="eyebrow">ARASHD.IR · PERSONAL ESSAYS</p>
+
     <h1 class="brand">Arash Derakhshan</h1>
-    <p class="tagline">Driven by clarity, fueled by execution.</p>
+
+    <p class="tagline">
+      Driven by clarity. Fueled by execution.
+    </p>
 
     <p class="lead">
-      Essays, notes, and ideas on business, growth, discipline, analytics,
-      leadership, and personal operating systems.
+      Essays and notes on business, strategy, execution, leadership,
+      growth, analytics, and the systems behind meaningful progress.
     </p>
   </header>
 
-  <section>
-    <h2>Choose language</h2>
+  <section class="language-section">
+    <p class="section-label">READ IN</p>
 
     <div class="language-grid">
       <a class="language-card" href="/en/">
-        <h2>English</h2>
-        <p>Essays and notes in English</p>
+        <span class="language-name">English</span>
+        <span class="language-description">
+          Essays and notes in English
+        </span>
+        <span class="language-arrow">→</span>
       </a>
 
       <a class="language-card rtl" href="/fa/">
-        <h2>فارسی</h2>
-        <p>مقاله‌ها و یادداشت‌های فارسی</p>
+        <span class="language-name">فارسی</span>
+        <span class="language-description">
+          مقاله‌ها و یادداشت‌های فارسی
+        </span>
+        <span class="language-arrow">←</span>
       </a>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>Personal archive. No comments, no noise, just writing.</p>
+  <footer class="footer home-footer">
+    <p>Personal archive · Independent writing · No noise</p>
   </footer>
 </BaseLayout>

@@ -11,23 +11,50 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 <BaseLayout
   title="English Essays | Arash Derakhshan"
-  description="English essays by Arash Derakhshan."
+  description="Essays and notes on business, execution, leadership, growth, analytics, and personal systems by Arash Derakhshan."
   lang="en"
   dir="ltr"
 >
-  <p><a href="/">← Home</a></p>
 
-  <h1>English Essays</h1>
 
-  <ul>
-    {posts.map((post) => (
-      <li>
-        <a href={`/en/essays/${post.id.replace("en/", "")}/`}>
-          {post.data.title}
-        </a>
-        {" "}
-        <small>{post.data.pubDate.toLocaleDateString("en-US")}</small>
-      </li>
-    ))}
-  </ul>
+  <header class="site-header">
+    <p class="eyebrow">ENGLISH ARCHIVE</p>
+
+    <h1 class="brand">Essays & Notes</h1>
+
+    <p class="tagline">
+      Ideas on business, execution, leadership, and meaningful progress.
+    </p>
+
+    <p class="lead">
+      A growing collection of observations, lessons, and frameworks drawn
+      from work, reading, building, and life.
+    </p>
+  </header>
+
+  <section>
+    <p class="section-label">LATEST WRITING</p>
+
+    <ul class="article-list">
+      {posts.map((post) => (
+        <li>
+          <a href={`/en/essays/${post.id.replace("en/", "")}/`}>
+            {post.data.title}
+          </a>
+
+          <small>
+            {post.data.pubDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })}
+          </small>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>Essays and notes by Arash Derakhshan · arashd.ir</p>
+  </footer>
 </BaseLayout>

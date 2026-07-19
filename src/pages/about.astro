@@ -1,63 +1,112 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
+<BaseLayout
+  title="About | Arash Derakhshan"
+  description="About Arash Derakhshan — business leader, strategist, and writer focused on execution, growth, leadership, and building effective systems."
+  lang="en"
+  dir="ltr"
 >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+  <div class="about-page">
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <header class="site-header about-hero">
+      <p class="eyebrow">ABOUT</p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+      <h1 class="brand">Arash Derakhshan</h1>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+      <p class="tagline">
+        Driven by clarity. Fueled by execution.
+      </p>
+
+      <p class="lead">
+        I work at the intersection of business strategy, execution,
+        growth, analytics, and leadership.
+      </p>
+    </header>
+
+    <article class="about-content">
+      <section class="about-intro">
+        <p>
+          With more than 14 years of experience, I have worked across
+          business development, startup building, financial analysis,
+          strategy, and team leadership in different industries.
+        </p>
+
+        <p>
+          My career has largely been about taking on new challenges,
+          creating structure where there is ambiguity, and turning
+          strategy into measurable execution.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <p class="section-label">HOW I WORK</p>
+
+        <h2>Clarity first. Execution always.</h2>
+
+        <p>
+          I believe great performance is rarely accidental. It is built
+          through clear priorities, disciplined execution, accountability,
+          and teams that understand exactly what they are trying to achieve.
+        </p>
+
+        <p>
+          As a leader, I try to lead by example — with personal discipline,
+          direct communication, and a strong bias toward results.
+        </p>
+      </section>
+
+      <section class="about-section">
+        <p class="section-label">WHAT I FOCUS ON</p>
+
+        <h2>Building systems that move organizations forward.</h2>
+
+        <p>
+          From owning P&amp;L responsibilities and developing business plans
+          to aligning teams through OKRs, improving pricing, analyzing
+          performance, and presenting strategic decisions to stakeholders,
+          my focus is always on connecting decisions to measurable outcomes.
+        </p>
+
+        <p>
+          I am especially interested in business strategy, execution,
+          leadership, growth, analytics, productivity, and the personal
+          systems that help people do meaningful work consistently.
+        </p>
+      </section>
+
+      <blockquote class="about-quote">
+        Strategy matters. But without disciplined execution, it remains
+        only an idea.
+      </blockquote>
+
+      <section class="about-section">
+        <p class="section-label">THIS WEBSITE</p>
+
+        <h2>A place to think in public.</h2>
+
+        <p>
+          This website is my personal archive of essays, notes, lessons,
+          and ideas.
+        </p>
+
+        <p>
+          I write about what I learn from work, leadership, business,
+          books, building things, and trying to become more effective
+          over time.
+        </p>
+
+        <p>
+          No noise. No endless feed. Just writing worth keeping.
+        </p>
+      </section>
+
+      <footer class="about-signature">
+        <p>Arash Derakhshan</p>
+        <span>arashd.ir</span>
+      </footer>
+    </article>
+  </div>
+</BaseLayout>

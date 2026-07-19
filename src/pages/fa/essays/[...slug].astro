@@ -8,8 +8,12 @@ export async function getStaticPaths() {
   });
 
   return posts.map((post) => ({
-    params: { slug: post.id.replace("fa/", "") },
-    props: { post },
+    params: {
+      slug: post.id.replace("fa/", ""),
+    },
+    props: {
+      post,
+    },
   }));
 }
 
@@ -23,27 +27,53 @@ const { Content } = await render(post);
   lang="fa"
   dir="rtl"
 >
-  <p class="nav"><a href="/fa/">بازگشت به آرشیو فارسی ←</a></p>
+  <div class="essay-page rtl">
 
-  <article>
-    <header class="article-header">
-      <h1 class="article-title">{post.data.title}</h1>
 
-      <p class="article-description">
-        {post.data.description}
-      </p>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">مقاله · آرش درخشان</p>
 
-      <p class="date">
-        <em>{post.data.pubDate.toLocaleDateString("fa-IR")}</em>
-      </p>
-    </header>
+        <h1 class="article-title">
+          {post.data.title}
+        </h1>
 
-    <section class="article-body">
-      <Content />
-    </section>
+        <p class="article-description">
+          {post.data.description}
+        </p>
 
-    <footer class="article-footer">
-      <p><a href="/fa/">بازگشت به آرشیو فارسی ←</a></p>
-    </footer>
-  </article>
+        <div class="article-meta">
+          <span>
+            {post.data.pubDate.toLocaleDateString("fa-IR", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
+
+          <span class="article-meta-separator">·</span>
+
+          <span>arashd.ir</span>
+        </div>
+      </header>
+
+      <div class="article-divider"></div>
+
+      <section class="article-body">
+        <Content />
+      </section>
+
+      <footer class="article-footer">
+        <p class="article-footer-label">
+          پایان مقاله
+        </p>
+
+        <p>
+          <a href="/fa/">
+            مشاهده نوشته‌های بیشتر ←
+          </a>
+        </p>
+      </footer>
+    </article>
+  </div>
 </BaseLayout>

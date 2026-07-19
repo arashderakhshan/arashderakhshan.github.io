@@ -8,8 +8,12 @@ export async function getStaticPaths() {
   });
 
   return posts.map((post) => ({
-    params: { slug: post.id.replace("en/", "") },
-    props: { post },
+    params: {
+      slug: post.id.replace("en/", ""),
+    },
+    props: {
+      post,
+    },
   }));
 }
 
@@ -23,27 +27,53 @@ const { Content } = await render(post);
   lang="en"
   dir="ltr"
 >
-  <p class="nav"><a href="/en/">← English Essays</a></p>
+  <div class="essay-page">
 
-  <article>
-    <header class="article-header">
-      <h1 class="article-title">{post.data.title}</h1>
 
-      <p class="article-description">
-        {post.data.description}
-      </p>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">ESSAY · ARASH DERAKHSHAN</p>
 
-      <p class="date">
-        <em>{post.data.pubDate.toLocaleDateString("en-US")}</em>
-      </p>
-    </header>
+        <h1 class="article-title">
+          {post.data.title}
+        </h1>
 
-    <section class="article-body">
-      <Content />
-    </section>
+        <p class="article-description">
+          {post.data.description}
+        </p>
 
-    <footer class="article-footer">
-      <p><a href="/en/">← Back to English archive</a></p>
-    </footer>
-  </article>
+        <div class="article-meta">
+          <span>
+            {post.data.pubDate.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
+
+          <span class="article-meta-separator">·</span>
+
+          <span>arashd.ir</span>
+        </div>
+      </header>
+
+      <div class="article-divider"></div>
+
+      <section class="article-body">
+        <Content />
+      </section>
+
+      <footer class="article-footer">
+        <p class="article-footer-label">
+          END OF ESSAY
+        </p>
+
+        <p>
+          <a href="/en/">
+            ← Explore more essays
+          </a>
+        </p>
+      </footer>
+    </article>
+  </div>
 </BaseLayout>
